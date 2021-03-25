@@ -7,6 +7,15 @@ BinarySring reversal Spring boot
 4. Spring H2- for database
 
 <-------Binary String reversal Logic------>
+    
+    public class BinaryService {
+        public String converttoInteger(int binaryInput){
+            StringBuilder inputString = new StringBuilder();
+            inputString.append(String.format("%8s", Integer.toBinaryString(binaryInput)).replace(' ', '0'));
+            Integer i=Integer.parseInt(inputString.reverse().toString(),2);
+            return i.toString();
+        }
+    }
 
 Test#1
 ![1](https://user-images.githubusercontent.com/44416146/112510338-560c7a80-8d5f-11eb-94e3-f28828e522b6.PNG)
